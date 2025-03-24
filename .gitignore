@@ -1,23 +1,32 @@
-# esp-idf
+# Track ONLY what's important: main source code and maybe README/license
+
+# Ignore everything by default
+*
+
+# But keep these:
+!.gitignore
+!main/
+!main/**
+!README.md
+!LICENSE
+
+# ESP-IDF
 sdkconfig.old
 sdkconfig
 
-# misc
+# PlatformIO
 .pioenvs
 .clang_complete
 .gcc-flags.json
 
-# Ignore vim swaps
-*.swp
-*.swo
-
-# Distribution files, used internally and build files
+# Build & cache
+build/
 dist/
-build/
 cmake-build-*/
-build/
+*.o
 
-# Xcode
+# VSCode & Xcode
+.vscode/
 *.mode*v*
 *.pbxuser
 *.xcbkptlist
@@ -30,14 +39,11 @@ xcschememanagement.plist
 xcuserdata/
 DerivedData/
 
-# VSCode
-.vscode/
-
 # Android Studio
 .gradle/
 .idea/
 
-# Qt-es
+# Qt
 /.qmake.cache
 /.qmake.stash
 *.pro.user
@@ -50,8 +56,9 @@ qrc_*.cpp
 ui_*.h
 *.autosave
 
-# Object files
-*.o
-
-# Vagrant stuff
+# Vagrant
 .vagrant
+
+# Vim swaps
+*.swp
+*.swo
